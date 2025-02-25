@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sicurezza Stradale</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+      }
+      header {
+        background: #333;
+        color: white;
+        padding: 1rem;
+        text-align: center;
+      }
+      nav ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+      }
+      nav ul li {
+        margin: 0 15px;
+      }
+      nav ul li a {
+        color: white;
+        text-decoration: none;
+      }
+      .hero {
+        text-align: center;
+        padding: 50px;
+        background: url("road.jpg") no-repeat center center/cover;
+        color: white;
+      }
+      .content {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        padding: 20px;
+      }
+      .card {
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      footer {
+        text-align: center;
+        padding: 10px;
+        background: #333;
+        color: white;
+        margin-top: 20px;
+      }
+      .avviso {
+        background-color: #e5e5e5;
+        width: 30%;
+        min-height: 30vh;
+        height: 20rem;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 1rem;
+        border-radius: 11px;
+        z-index: 110;
+        position: relative;
+        top: -20rem;
+        text-align: center;
+      }
+      .avviso #superiore {
+        padding: 0.3rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+      }
+
+      #cl:hover {
+        cursor: pointer;
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">SafeRoad</div>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#info">Informazioni</a></li>
+          <li><a href="#contatti">Contatti</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="home" class="hero">
+      <h1>Benvenuto su SafeRoad</h1>
+      <p>Un progetto dedicato alla sicurezza stradale e alla prevenzione.</p>
+      <button onclick="showAlert()">Scopri di più</button>
+    </section>
+
+    <section id="info" class="content">
+      <div class="card">
+        <h2>Consapevolezza</h2>
+        <p>
+          Essere informati sui rischi della strada è il primo passo per
+          viaggiare sicuri.
+        </p>
+      </div>
+      <div class="card">
+        <h2>Prevenzione</h2>
+        <p>
+          Scopri le migliori pratiche per evitare incidenti e viaggiare in
+          sicurezza.
+        </p>
+      </div>
+    </section>
+
+    <div class="avviso" id="avviso">
+      <div id="superiore">
+        <span id="titolo">ATTENZIONE!</span>
+        <span id="cl" onclick="chiudi()"> CHIUDI </span>
+      </div>
+      <p>
+        Stiamo ancora lavorando al sito per offrirti la migliore esperienza
+        possibile.
+      </p>
+    </div>
+
+    <script>
+      function showAlert() {
+        alert("Funzione in sviluppo!");
+      }
+    </script>
+
+    <!--script chiudi box-->
+    <script>
+      function chiudi() {
+        var box = (document.getElementById("avviso").style.display = "none");
+      }
+    </script>
+  </body>
+</html>
